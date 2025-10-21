@@ -11,31 +11,37 @@ import co.edu.uco.nose.data.dao.entity.UserDao;
 public abstract class DaoFactory {
 	
 	protected Connection connection;
-	
 	protected FactoryEnum factory = FactoryEnum.POSTGRESQL;
 	
 	public static DaoFactory getFactory() {
 		return null;
+		
 	}
 	
-	public abstract CityDao getCityDAO();
-	
-	public abstract CountryDao getCountryDAO();
-	
-	public abstract IdTypeDao getIdTypeDAO();
-	
-	public abstract StateDao getStateDAO();
-	
-	public abstract UserDao getUserDAO();
+	public abstract CityDao getCityDao();
+	public abstract CountryDao getCountryDao();
+	public abstract StateDao getStateDao();
+	public abstract IdTypeDao getIdTypeDao();
+	public abstract UserDao getUserDao();
 	
 	protected abstract void openConnection();
 	
-	protected final void initTransaction(){}
+	protected final void initTransaction() {
+		
+	}
 	
-	protected final void commitTransaction(){}
+	protected final void commitTransaction() {
+		
+	}
 	
-	protected final void rollbackTransaction(){}
+	protected final void rollbackTransaction() {
+		
+	}
 	
-	protected final void closeConnection(){}
+	
+	protected final void closeConnection() {
+		
+	}
+	
 
 }

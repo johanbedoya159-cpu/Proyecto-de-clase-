@@ -3,7 +3,7 @@ package co.edu.uco.nose.crosscuting.exception;
 import co.edu.uco.nose.crosscuting.helper.ObjectHelper;
 import co.edu.uco.nose.crosscuting.helper.TextHelper;
 
-public class NoseException extends RuntimeException {
+public final class NoseException extends RuntimeException {
 	
 	private static final long serialVersionUID= 512335343454L;
 	private Throwable rootException;
