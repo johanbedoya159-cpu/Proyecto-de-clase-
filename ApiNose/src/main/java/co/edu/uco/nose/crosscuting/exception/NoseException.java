@@ -10,12 +10,14 @@ public final class NoseException extends RuntimeException {
 	private static String userMessage;
 	private String technicalMessage;
 	
-	private NoseException(final Throwable rootException, final String suerMessage, String userMessage2) {
+	
+	private NoseException(final Throwable rootException, final String suerMessage, final String technicalMessage) {
 		setRootException(rootException);
 		setUserMessage(suerMessage);
 		setTechnicalMessage(suerMessage);
 	
 	}
+	
 	
 	public static NoseException create(final String userMessage) {
 		return new NoseException(new Exception(), userMessage, userMessage);

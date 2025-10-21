@@ -5,6 +5,11 @@ import java.util.UUID;
 import co.edu.uco.nose.data.dao.RetrieveDao;
 
 public interface IdTypeDto extends RetrieveDao<IdTypeDto, UUID> {
+
+	static IdTypeDto getDefault() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

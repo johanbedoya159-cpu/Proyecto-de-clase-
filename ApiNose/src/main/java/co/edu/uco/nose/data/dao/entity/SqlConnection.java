@@ -16,11 +16,11 @@ public abstract class SqlConnection {
 		setConnection(connection);
 	}
 
-	public Connection getConnection() {
+	protected Connection getConnection() {
 		return connection;
 	}
 
-	private void setConnection(Connection connection) {
+	private void setConnection(final Connection connection) {
 		if (ObjectHelper.isNull(connection)) {
 			var userMessage= MessagesEnum.USER_ERROR_SQL_CONNCETION_IS_EMPTY.getContent();
 			var technicalMessage=MessagesEnum.TECHNICAL_ERROR_SQL_CONNCETION_IS_EMPTY.getContent();
